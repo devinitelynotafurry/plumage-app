@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -28,6 +30,21 @@ android {
             applicationIdSuffix = ".debug"
         }
         release {
+            val keystoreFile = project.rootProject.file("plumage.keystore")
+            val localProperties = Properties()
+            val localPropertiesFile = project.rootProject.file("local.properties")
+            if (localPropertiesFile.exists()) {
+                localProperties.load(localPropertiesFile.inputStream())
+            }
+
+            if (keystoreFile.exists()) {
+                signingConfig = signingConfigs.create("release") {
+                    storeFile = keystoreFile
+                    storePassword = localProperties.getProperty("signing.keystore.password")
+                    keyAlias = localProperties.getProperty("signing.key.alias")
+                    keyPassword = localProperties.getProperty("signing.key.password")
+                }
+            }
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
