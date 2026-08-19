@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- A single feather: the whole app is one bird tag at a time. -->
+    <path
+        android:fillColor="#FDF6F4"
+        android:pathData="M70,28 C78,38 78,54 68,66 C60,76 50,80 42,80 L38,80 L54,60 L40,66 C42,56 48,44 56,36 C60,32 65,29 70,28 Z" />
+    <path
+        android:fillColor="#F2A79F"
+        android:pathData="M40,80 L34,88 L30,86 L36,78 Z" />
+</vector>
