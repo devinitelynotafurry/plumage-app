@@ -13,7 +13,7 @@ Browse your favorite tags with a swipe-based interface: swipe right to keep a po
 
 ## Installation
 
-1.  Download the latest APK from the [Releases](https://github.com/YOUR_USERNAME/Plumage/releases) page.
+1.  Download the latest APK from the [Releases](https://github.com/devinitelynotafurry/plumage-app/releases) page.
 2.  Install the APK on your device.
 3.  **Important:** Open **Settings** in the app and enter your e926 username or a contact handle. This ensures the app is a "good API citizen" by identifying itself to the e926 servers.
 
