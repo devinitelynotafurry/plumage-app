@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:MediaExporter.kt$MediaExporter$suspend fun export(context: Context, url: String, postId: Long, ext: String): Result</ID>
+    <ID>Filename:AutocompleteDto.kt$dev.plumage.data.remote.dto.AutocompleteDto.kt</ID>
+    <ID>ImportOrdering:SwipeScreen.kt$import androidx.compose.animation.core.animateDpAsState import androidx.compose.animation.core.spring import androidx.compose.foundation.background import androidx.compose.foundation.clickable import androidx.compose.foundation.layout.Arrangement import androidx.compose.foundation.layout.Box import androidx.compose.foundation.layout.Column import androidx.compose.foundation.layout.PaddingValues import androidx.compose.foundation.layout.Row import androidx.compose.foundation.layout.aspectRatio import androidx.compose.foundation.layout.fillMaxSize import androidx.compose.foundation.layout.fillMaxWidth import androidx.compose.foundation.layout.heightIn import androidx.compose.foundation.layout.padding import androidx.compose.foundation.layout.safeDrawingPadding import androidx.compose.foundation.layout.size import androidx.compose.foundation.layout.WindowInsets import androidx.compose.foundation.layout.ime import androidx.compose.foundation.layout.windowInsetsPadding import androidx.compose.foundation.lazy.LazyColumn import androidx.compose.foundation.lazy.items import androidx.compose.foundation.shape.RoundedCornerShape import androidx.compose.foundation.text.KeyboardActions import androidx.compose.foundation.text.KeyboardOptions import androidx.compose.material.icons.Icons import androidx.compose.material.icons.automirrored.rounded.ArrowBack import androidx.compose.material.icons.rounded.Check import androidx.compose.material.icons.rounded.Close import androidx.compose.material.icons.rounded.GridView import androidx.compose.material.icons.rounded.Refresh import androidx.compose.material.icons.rounded.Search import androidx.compose.material.icons.rounded.Tune import androidx.compose.material3.CircularProgressIndicator import androidx.compose.material3.Icon import androidx.compose.material3.IconButton import androidx.compose.material3.MaterialTheme import androidx.compose.material3.Snackbar import androidx.compose.material3.Surface import androidx.compose.material3.Text import androidx.compose.material3.TextField import androidx.compose.material3.TextFieldDefaults import androidx.compose.runtime.Composable import androidx.compose.runtime.LaunchedEffect import androidx.compose.runtime.collectAsState import androidx.compose.runtime.getValue import androidx.compose.runtime.mutableStateOf import androidx.compose.runtime.remember import androidx.compose.runtime.setValue import androidx.compose.runtime.rememberCoroutineScope import androidx.compose.ui.Alignment import androidx.compose.ui.Modifier import androidx.compose.ui.draw.clip import androidx.compose.ui.focus.FocusRequester import androidx.compose.ui.focus.focusRequester import androidx.compose.ui.graphics.Color import androidx.compose.ui.graphics.graphicsLayer import androidx.compose.ui.layout.ContentScale import androidx.compose.ui.platform.LocalConfiguration import androidx.compose.ui.platform.LocalContext import androidx.compose.ui.platform.LocalSoftwareKeyboardController import androidx.compose.ui.text.input.ImeAction import androidx.compose.ui.unit.dp import androidx.hilt.navigation.compose.hiltViewModel import coil.compose.AsyncImage import coil.request.ImageRequest import dev.plumage.domain.model.Post import dev.plumage.domain.model.SortMode import dev.plumage.ui.common.EmptyState import dev.plumage.ui.common.PillButton import dev.plumage.ui.common.RoundActionButton import dev.plumage.ui.common.SegmentedRow import dev.plumage.ui.common.SquareActionButton import kotlinx.coroutines.delay import kotlinx.coroutines.launch</ID>
+    <ID>ImportOrdering:SwipeViewModel.kt$import androidx.lifecycle.ViewModel import androidx.lifecycle.viewModelScope import dev.plumage.data.prefs.SettingsRepository import dev.plumage.data.repo.CollectionRepository import dev.plumage.data.repo.PostRepository import dev.plumage.domain.QueryBuilder import dev.plumage.domain.model.Post import dev.plumage.domain.model.Settings import dev.plumage.domain.model.SortMode import dev.plumage.domain.model.TagSuggestion import dagger.hilt.android.lifecycle.HiltViewModel import kotlinx.coroutines.FlowPreview import kotlinx.coroutines.flow.MutableStateFlow import kotlinx.coroutines.flow.SharingStarted import kotlinx.coroutines.flow.StateFlow import kotlinx.coroutines.flow.asStateFlow import kotlinx.coroutines.flow.debounce import kotlinx.coroutines.flow.distinctUntilChanged import kotlinx.coroutines.flow.first import kotlinx.coroutines.flow.flatMapLatest import kotlinx.coroutines.flow.flowOf import kotlinx.coroutines.flow.stateIn import kotlinx.coroutines.launch import javax.inject.Inject</ID>
+    <ID>ImportOrdering:ViewerScreen.kt$import androidx.compose.foundation.background import androidx.compose.foundation.gestures.detectTapGestures import androidx.compose.foundation.gestures.detectTransformGestures import androidx.compose.foundation.layout.Arrangement import androidx.compose.foundation.layout.Box import androidx.compose.foundation.layout.Column import androidx.compose.foundation.layout.Row import androidx.compose.foundation.layout.fillMaxSize import androidx.compose.foundation.layout.fillMaxWidth import androidx.compose.foundation.layout.padding import androidx.compose.material.icons.Icons import androidx.compose.material.icons.rounded.Download import androidx.compose.material.icons.rounded.DeleteOutline import androidx.compose.material3.AlertDialog import androidx.compose.material3.CircularProgressIndicator import androidx.compose.material3.MaterialTheme import androidx.compose.material3.Text import androidx.compose.material3.TextButton import androidx.compose.runtime.Composable import androidx.compose.runtime.LaunchedEffect import androidx.compose.runtime.collectAsState import androidx.compose.runtime.getValue import androidx.compose.runtime.mutableFloatStateOf import androidx.compose.runtime.mutableStateOf import androidx.compose.runtime.remember import androidx.compose.runtime.setValue import androidx.compose.ui.Alignment import androidx.compose.ui.Modifier import androidx.compose.ui.graphics.graphicsLayer import androidx.compose.ui.input.pointer.pointerInput import androidx.compose.ui.layout.ContentScale import androidx.compose.ui.platform.LocalContext import androidx.compose.ui.unit.dp import androidx.hilt.navigation.compose.hiltViewModel import coil.compose.AsyncImage import coil.request.ImageRequest import dev.plumage.ui.common.PlumageTopBar import dev.plumage.ui.common.RoundActionButton</ID>
+    <ID>LongMethod:SettingsScreen.kt$@Composable fun SettingsScreen( onBack: () -&gt; Unit, viewModel: SettingsViewModel = hiltViewModel() )</ID>
+    <ID>LongMethod:SwipeScreen.kt$@Composable fun SwipeScreen( onOpenCollections: () -&gt; Unit, onOpenSettings: () -&gt; Unit, viewModel: SwipeViewModel = hiltViewModel() )</ID>
+    <ID>LongMethod:SwipeScreen.kt$@Composable private fun SearchOverlay( onBack: () -&gt; Unit, viewModel: SwipeViewModel )</ID>
+    <ID>LongMethod:ViewerScreen.kt$@Composable fun ViewerScreen( collectionName: String, postId: Long, onBack: () -&gt; Unit, viewModel: ViewerViewModel = hiltViewModel() )</ID>
+    <ID>LongParameterList:Components.kt$( icon: ImageVector, contentDescription: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, container: Color = MaterialTheme.colorScheme.surfaceVariant, tint: Color = MaterialTheme.colorScheme.onSurfaceVariant, enabled: Boolean = true, size: Int = 64 )</ID>
+    <ID>LongParameterList:Components.kt$( icon: ImageVector, contentDescription: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, container: Color = MaterialTheme.colorScheme.surfaceVariant, tint: Color = MaterialTheme.colorScheme.onSurfaceVariant, size: Int = 52 )</ID>
+    <ID>LongParameterList:SwipeCard.kt$( state: SwipeCardState, enabled: Boolean, scope: CoroutineScope, onDecided: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, content: @Composable () -&gt; Unit )</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$0.25</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$1024</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$15</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$256L</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$30</ID>
+    <ID>MagicNumber:AppModule.kt$AppModule$45</ID>
+    <ID>MagicNumber:CollectionsViewModel.kt$CollectionsViewModel$5_000</ID>
+    <ID>MagicNumber:Color.kt$0xFF1A1211</ID>
+    <ID>MagicNumber:Color.kt$0xFF241816</ID>
+    <ID>MagicNumber:Color.kt$0xFF3A2624</ID>
+    <ID>MagicNumber:Color.kt$0xFF3B2724</ID>
+    <ID>MagicNumber:Color.kt$0xFF4A2320</ID>
+    <ID>MagicNumber:Color.kt$0xFF5E3430</ID>
+    <ID>MagicNumber:Color.kt$0xFF6E5350</ID>
+    <ID>MagicNumber:Color.kt$0xFF7D4A44</ID>
+    <ID>MagicNumber:Color.kt$0xFF8E3B3B</ID>
+    <ID>MagicNumber:Color.kt$0xFFD3B4AF</ID>
+    <ID>MagicNumber:Color.kt$0xFFF2A79F</ID>
+    <ID>MagicNumber:Color.kt$0xFFF2B5AC</ID>
+    <ID>MagicNumber:Color.kt$0xFFF2B8B5</ID>
+    <ID>MagicNumber:Color.kt$0xFFF3E2DF</ID>
+    <ID>MagicNumber:Color.kt$0xFFF6CE7F</ID>
+    <ID>MagicNumber:Color.kt$0xFFF7E6E4</ID>
+    <ID>MagicNumber:Color.kt$0xFFF9DEDE</ID>
+    <ID>MagicNumber:Color.kt$0xFFFDF6F4</ID>
+    <ID>MagicNumber:Components.kt$2.2f</ID>
+    <ID>MagicNumber:Components.kt$2.4f</ID>
+    <ID>MagicNumber:PlumageNavHost.kt$160</ID>
+    <ID>MagicNumber:PlumageNavHost.kt$200</ID>
+    <ID>MagicNumber:PlumageNavHost.kt$220</ID>
+    <ID>MagicNumber:PlumageNavHost.kt$6</ID>
+    <ID>MagicNumber:SettingsViewModel.kt$SettingsViewModel$5_000</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.04f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.05f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.06f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.1f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.45f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.55f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.94f</ID>
+    <ID>MagicNumber:SwipeCard.kt$0.9f</ID>
+    <ID>MagicNumber:SwipeCard.kt$12f</ID>
+    <ID>MagicNumber:SwipeCard.kt$SwipeCardState$0.12f</ID>
+    <ID>MagicNumber:SwipeCard.kt$SwipeCardState$0.5f</ID>
+    <ID>MagicNumber:SwipeCard.kt$SwipeCardState$1.8f</ID>
+    <ID>MagicNumber:SwipeScreen.kt$0.62f</ID>
+    <ID>MagicNumber:SwipeScreen.kt$1.1f</ID>
+    <ID>MagicNumber:SwipeScreen.kt$4000</ID>
+    <ID>MagicNumber:SwipeViewModel.kt$SwipeViewModel$5_000</ID>
+    <ID>MagicNumber:TagSearchField.kt$100_000</ID>
+    <ID>MagicNumber:TagSearchField.kt$10f</ID>
+    <ID>MagicNumber:TagSearchField.kt$1_000</ID>
+    <ID>MagicNumber:TagSearchField.kt$1_000_000</ID>
+    <ID>MagicNumber:ViewerScreen.kt$3000</ID>
+    <ID>MagicNumber:ViewerScreen.kt$5f</ID>
+    <ID>MatchingDeclarationName:AutocompleteDto.kt$TagSuggestionDto</ID>
+    <ID>MatchingDeclarationName:PlumageNavHost.kt$Routes</ID>
+    <ID>MatchingDeclarationName:SwipeCard.kt$SwipeCardState</ID>
+    <ID>MultiLineIfElse:Components.kt$MaterialTheme.colorScheme.onPrimary</ID>
+    <ID>MultiLineIfElse:Components.kt$MaterialTheme.colorScheme.onSurfaceVariant</ID>
+    <ID>MultiLineIfElse:Components.kt$MaterialTheme.colorScheme.primary</ID>
+    <ID>MultiLineIfElse:Components.kt$MaterialTheme.colorScheme.surfaceVariant</ID>
+    <ID>MultiLineIfElse:SettingsScreen.kt$"$seenCount posts remembered"</ID>
+    <ID>MultiLineIfElse:SettingsScreen.kt$"Nothing recorded yet"</ID>
+    <ID>MultiLineIfElse:ViewerScreen.kt$scale = 2.5f</ID>
+    <ID>NoTrailingSpaces:SettingsScreen.kt$// Local state to ensure smooth typing. We only pull from the external 'value' </ID>
+    <ID>NoTrailingSpaces:SettingsScreen.kt$// when it actually changes to a new value from the data store, rather than </ID>
+    <ID>NoTrailingSpaces:SwipeCard.kt$// If the card is far enough to one side, that position takes </ID>
+    <ID>NoTrailingSpaces:SwipeCard.kt$// precedence over velocity. This stops accidental flings in the </ID>
+    <ID>NoUnusedImports:SwipeScreen.kt$dev.plumage.ui.swipe.SwipeScreen.kt</ID>
+    <ID>NoUnusedImports:TagSearchField.kt$dev.plumage.ui.swipe.TagSearchField.kt</ID>
+    <ID>SpacingBetweenDeclarationsWithAnnotations:AppModule.kt$AppModule$@Provides fun provideCursorDao(db: PlumageDatabase): CursorDao</ID>
+    <ID>SpacingBetweenDeclarationsWithAnnotations:AppModule.kt$AppModule$@Provides fun provideSeenDao(db: PlumageDatabase): SeenDao</ID>
+    <ID>SpacingBetweenDeclarationsWithAnnotations:PlumageApp.kt$PlumageApp$@Inject lateinit var imageLoaderProvider: Provider&lt;ImageLoader&gt;</ID>
+    <ID>SwallowedException:PostRepository.kt$PostRepository$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PostRepository.kt$PostRepository$e: Exception</ID>
+    <ID>TooManyFunctions:AppModule.kt$AppModule</ID>
+    <ID>TooManyFunctions:SwipeViewModel.kt$SwipeViewModel : ViewModel</ID>
+    <ID>Wrapping:ViewerScreen.kt$;</ID>
+  </CurrentIssues>
+</SmellBaseline>
